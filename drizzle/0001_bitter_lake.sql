@@ -1,0 +1,1 @@
+ALTER TABLE `clients` ADD `follow_up_interval_days` integer DEFAULT 7;
