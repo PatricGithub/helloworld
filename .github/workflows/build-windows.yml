@@ -23,8 +23,8 @@ jobs:
       - name: Install Python setuptools (required by node-gyp)
         run: pip install setuptools
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies (skip postinstall — electron-builder will rebuild native modules)
+        run: npm install --ignore-scripts
 
       - name: Build app + Windows installer
         run: npm run build:win
